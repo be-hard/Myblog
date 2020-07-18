@@ -24,7 +24,7 @@ var store = new Vuex.Store({
         dont: false
       }
     },
-      bloglist:  list 
+      bloglist:  list || []
     
 },
     mutations: {

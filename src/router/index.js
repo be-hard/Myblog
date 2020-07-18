@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 import addblog from '@/components/addblog'
 import showblog from '@/components/showblog'
 import myblogs from '@/components/myblogs'

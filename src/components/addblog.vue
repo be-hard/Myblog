@@ -8,7 +8,7 @@
       <textarea name id cols="30" rows="10" class="context-area" v-model="itemdata.context"></textarea>
       <label class="kinds">分类</label>
      <div class="select-mode">
-        <label v-for="(item,index) in itemdata.kinds">
+        <label v-for="(item,index) in itemdata.kinds" :key="index">
           <input type="checkbox" v-model="itemdata.kinds[index]" />
           {{index}}
         </label>
@@ -17,7 +17,7 @@
       <label for class="authod">作者</label>
 
       <select name id v-model="itemdata.authod">
-        <option v-for="item in list" :value="item" >{{item}}</option>
+        <option v-for="(item,index) in list" :value="item" :key="index" >{{item}}</option>
       </select>
       <div @click="btnclick"><router-link  tag="button"  to="/" class="add-button" >添加博客</router-link></div>
 

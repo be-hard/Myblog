@@ -1,6 +1,7 @@
 <template>
   <ul class="myblog">
-    <router-link  v-for="item in mybloglist" :to="'/rewrite/'+item.id"  tag="li">
+    <router-link  v-for="item in mybloglist" :key="item.id"
+    :to="'/rewrite/'+item.id"  tag="li">
     <h3 class="myblog-title"><i class="iconfont icon-biaoti"></i>{{item.inputValue||""}}</h3>
     <p class="myblog-context"><i class="iconfont icon-neirong2"></i>{{item.context}}</p>
    <i class="iconfont icon-shanchu" @click.prevent="dele(item)"></i>
